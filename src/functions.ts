@@ -13,5 +13,5 @@ function returnTestResultAsString(testCaseId: string, testResult: string): strin
 // In other cases it must return `true`.
 
 const decisionIfTestMayrun = (isTestTurnedOn: boolean, numberOfRuns: number): 
-boolean => {return isTestTurnedOn && numberOfRuns < 3};  
+boolean => {return isTestTurnedOn && numberOfRuns < 3};
  
