@@ -14,4 +14,15 @@ function returnTestResultAsString(testCaseId: string, testResult: string): strin
 
 const decisionIfTestMayrun = (isTestTurnedOn: boolean, numberOfRuns: number): 
 boolean => {return isTestTurnedOn && numberOfRuns < 3};
+
+//3. Call both functions with enough different values 
+// to show all these results. Print what each function returns.
+
+console.log(returnTestResultAsString("TC-101", "PASS")); // TC-101: PASS
+console.log(returnTestResultAsString("TC-102", "FAIL")); // TC-102: FAIL
+
+console.log(decisionIfTestMayrun(true, 2)); // true
+console.log(decisionIfTestMayrun(false, 1)); // false
+console.log(decisionIfTestMayrun(true, 3)); // false    
+console.log(decisionIfTestMayrun(false, 4)); // false
  
