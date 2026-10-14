@@ -9,10 +9,10 @@ export function addNumbers(numberOne: number, numberTwo: number): number {
     return numberOne + numberTwo};
 
 function multiplyTwoNumbers(numberOneToMultiply: number, numberTwoToMultiply: number): number{
-    return numberOneToMultiply * numberTwoToMultiply};
+    return numberOneToMultiply * numberTwoToMultiply}
 
 function twoNumbersAverage(numberOnePartOfEverage: number, numberTwoPartOfEverage: number): number {
-    return (numberOnePartOfEverage + numberTwoPartOfEverage)/2};
+    return (numberOnePartOfEverage + numberTwoPartOfEverage)/2}
 
 console.log(addNumbers(10, 4));
 console.log(multiplyTwoNumbers(10, 4));

@@ -5,7 +5,7 @@
 // For test `TC-102` that failed, it must return `TC-102: FAIL`.
 
 function returnTestResultAsString(testCaseId: string, testResult: string): string {
-    return `${testCaseId}: ${testResult}`;
+    return `${testCaseId}: ${testResult}`
 }
 
 // 2. Write an arrow function that says if a test may run.
@@ -13,7 +13,7 @@ function returnTestResultAsString(testCaseId: string, testResult: string): strin
 // In other cases it must return `true`.
 
 const decisionIfTestMayrun = (isTestTurnedOn: boolean, numberOfRuns: number): 
-boolean => {return isTestTurnedOn && numberOfRuns < 3};
+boolean => {return isTestTurnedOn && numberOfRuns < 3}
 
 //3. Call both functions with enough different values 
 // to show all these results. Print what each function returns.
