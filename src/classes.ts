@@ -22,6 +22,19 @@
 // When you run `src/classes.ts`, you will also see the Task 3 output from `src/math.ts` because the imported file runs too.
 //  This is expected. Commit `src/classes.ts` and its results before the star task.
 
+// ## ⭐ Optional task — Private and protected fields (30–45 extra minutes)
+
+// Work with the same classes:
+
+// 1. In `BaseUser`, add a `private` field called `note` and a `protected` field called `visitCount`. 
+// Give `note` a short fake text and start `visitCount` at `0`.
+//2. Add public `getNote()` and `updateNote()` methods to `BaseUser`. Use them to read and change `note`.
+//3. Add a public `getVisitCount()` method to `BaseUser`. 
+// In `UserBahrain`, add a public `addVisit()` method that increases `this.visitCount` by `1`.
+/// 4. At the bottom of `src/classes.ts`, print both values before and after you change them through the methods. 
+// Do not read or change `note` or `visitCount` directly from the code below the classes.
+// If you do this task, commit it separately from Task 4.
+
 import { addNumbers } from './math.ts';
 
 interface BaseUserData {
@@ -32,6 +45,17 @@ interface BaseUserData {
 class BaseUser implements BaseUserData {
     name: string;
     age: number;
+    private note: string = "Short fake text";
+    protected visitCount: number = 0;
+    getNote(): string {
+        return this.note;
+    }
+    updateNote(newNote: string): string {
+        return this.note = newNote;;
+    }
+    getVisitCount(): number {
+        return this.visitCount;
+    }
 
     constructor(name: string, age: number) {
         this.name = name;
@@ -68,11 +92,26 @@ class UserBahrain extends BaseUser {
     isAdult(): boolean {
         return this.age >= 21;
     }
+
+    addVisit(): number {
+        return ++this.visitCount;
+    }
 }
 
 const polishUser = new UserPoland('Janusz Kowalski', 19, 'XYZ12434');
 const bahrainUser = new UserBahrain('Ahmed Al Khalifa', 19, 'YSKDI3803');
 
 console.log(polishUser.name, polishUser.polishID, polishUser.isAdult());
-console.log(bahrainUser.name, bahrainUser.bahrainID, bahrainUser.isAdult());
+console.log(bahrainUser.name, bahrainUser.bahrainID, bahrainUser.isAdult(), bahrainUser.addVisit());
 console.log(polishUser.ageInYears(5));
+
+// --- ⭐ Optional Task Execution (Before & After) ---
+
+console.log('Note before update:', polishUser.getNote());
+polishUser.updateNote('Updated fake text for Poland');
+console.log('Note after update:', polishUser.getNote());
+
+console.log('Visits before addVisit:', bahrainUser.getVisitCount());
+bahrainUser.addVisit();
+bahrainUser.addVisit();
+console.log('Visits after two addVisit calls:', bahrainUser.getVisitCount());
