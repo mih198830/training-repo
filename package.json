@@ -1,0 +1,15 @@
+{
+  "name": "training-repo-3(typescript_practice)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hometask.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "dependencies": {
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
