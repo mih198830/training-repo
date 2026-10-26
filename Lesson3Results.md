@@ -13,3 +13,5 @@ false
 status-loaded
 show-status
 Alex: ACTIVE
+
+## Task 2 — Make your own helper and alias

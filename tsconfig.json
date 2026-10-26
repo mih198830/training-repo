@@ -12,7 +12,8 @@
     "allowImportingTsExtensions": true,
     "strict": true,
     "paths": {
-      "@test-data/*": ["./test-data/*"]
+      "@test-data/*": ["./test-data/*"],
+      "@helpers/*": ["./src/helpers/*"]
     }
   }
 }

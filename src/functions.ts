@@ -7,6 +7,7 @@
 // For test `TC-102` that failed, it must return `TC-102: FAIL`.
 
 import { loadFakeStatus } from '@test-data/fakeServer';
+import { formatStatus } from '@helpers/helperExample';  
 
 function returnTestResultAsString(testCaseId: string, testResult: string): string {
     return `${testCaseId}: ${testResult}`
