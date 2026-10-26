@@ -36,6 +36,7 @@
 // If you do this task, commit it separately from Task 4.
 
 import { addNumbers } from './math.ts';
+import { showUserStatus } from'./functions.ts';
 
 interface BaseUserData {
     name: string;

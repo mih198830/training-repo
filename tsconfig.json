@@ -1,12 +1,18 @@
 {
-"compilerOptions": {
-"target": "ES2022",
-"module": "NodeNext",
-"moduleResolution": "NodeNext",
-"moduleDetection": "force",
-"noEmit": true,
-"allowImportingTsExtensions": true,
-"strict": true
-},
-"include": ["src/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "test-data/**/*.ts"
+  ],
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "strict": true,
+    "paths": {
+      "@test-data/*": ["./test-data/*"]
+    }
+  }
 }

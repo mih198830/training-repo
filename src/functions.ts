@@ -1,8 +1,12 @@
+
+
 // Task 2 — Functions
 
 // 1. Write a regular function that returns a test result as a string.
 // For test `TC-101` that passed, it must return `TC-101: PASS`.
 // For test `TC-102` that failed, it must return `TC-102: FAIL`.
+
+import { loadFakeStatus } from '@test-data/fakeServer';
 
 function returnTestResultAsString(testCaseId: string, testResult: string): string {
     return `${testCaseId}: ${testResult}`
@@ -25,4 +29,14 @@ console.log(decisionIfTestMayrun(true, 2)); // true
 console.log(decisionIfTestMayrun(false, 1)); // false
 console.log(decisionIfTestMayrun(true, 3)); // false    
 console.log(decisionIfTestMayrun(false, 4)); // false
+
+export async function showUserStatus(name: string): Promise <string> {
+const status = await loadFakeStatus(name); // TODO: wait for the result
+console.log('show-status');
+return `${status.name}: ${status.active ? 'ACTIVE' : 'INACTIVE'}`;
+}
  
+async function runModule04Example(): Promise <void> {
+console.log(await showUserStatus('Alex'));
+}
+runModule04Example();
