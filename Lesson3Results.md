@@ -15,3 +15,9 @@ show-status
 Alex: ACTIVE
 
 ## Task 2 — Make your own helper and alias
+
+
+## Task 3 - Fix the async function
+status-loaded
+show-status
+Alex: ACTIVE

@@ -32,12 +32,11 @@ console.log(decisionIfTestMayrun(true, 3)); // false
 console.log(decisionIfTestMayrun(false, 4)); // false
 
 export async function showUserStatus(name: string): Promise <string> {
-const status = await loadFakeStatus(name); // TODO: wait for the result
+const status = await loadFakeStatus(name);
 console.log('show-status');
-return `${status.name}: ${status.active ? 'ACTIVE' : 'INACTIVE'}`;
-}
- 
+return formatStatus(status.name, status.active);
+} 
+
 async function runModule04Example(): Promise <void> {
 console.log(await showUserStatus('Alex'));
-}
-runModule04Example();
+} runModule04Example();
