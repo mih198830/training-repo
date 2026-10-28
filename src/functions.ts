@@ -1,5 +1,3 @@
-
-
 // Task 2 — Functions
 
 // 1. Write a regular function that returns a test result as a string.
@@ -8,6 +6,7 @@
 
 import { loadFakeStatus } from '@test-data/fakeServer';
 import { formatStatus } from '@helpers/helperExample';  
+import { waitForReady as waitForReadyAlias } from '@helpers/helperExample';
 
 function returnTestResultAsString(testCaseId: string, testResult: string): string {
     return `${testCaseId}: ${testResult}`
@@ -33,6 +32,7 @@ console.log(decisionIfTestMayrun(false, 4)); // false
 
 export async function showUserStatus(name: string): Promise <string> {
 const status = await loadFakeStatus(name);
+await waitForReadyAlias(200);
 console.log('show-status');
 return formatStatus(status.name, status.active);
 } 
@@ -40,3 +40,4 @@ return formatStatus(status.name, status.active);
 async function runModule04Example(): Promise <void> {
 console.log(await showUserStatus('Alex'));
 } runModule04Example();
+

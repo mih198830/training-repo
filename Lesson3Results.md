@@ -21,3 +21,9 @@ Alex: ACTIVE
 status-loaded
 show-status
 Alex: ACTIVE
+
+## Task 4 — Write and await your own Promise
+status-loaded
+display-ready 200
+show-status
+Alex: ACTIVE
