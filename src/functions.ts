@@ -30,12 +30,12 @@ console.log(decisionIfTestMayrun(false, 1)); // false
 console.log(decisionIfTestMayrun(true, 3)); // false    
 console.log(decisionIfTestMayrun(false, 4)); // false
 
-export async function showUserStatus(name: string): Promise <string> {
-const status = await loadFakeStatus(name);
-await waitForReadyAlias(200);
-console.log('show-status');
-return formatStatus(status.name, status.active);
-} 
+export async function showUserStatus(name: string): Promise<string> {
+    const status = await loadFakeStatus(name); // Prints 'status-loaded' internally
+    await waitForReadyAlias(200);             // Waits 200ms, then prints 'display-ready'
+    console.log('show-status');                // Prints 'show-status'
+    return formatStatus(status.name, status.active); // Returns 'Alex: ACTIVE' (printed by caller)
+}
 
 async function runModule04Example(): Promise <void> {
 console.log(await showUserStatus('Alex'));

@@ -4,7 +4,10 @@ export function formatStatus(name: string, active: boolean): string {
 
 export function waitForReady(ms: number): Promise<void> {
     return new Promise<void>((resolve) => {
-        setTimeout(() => {console.log('display-ready', ms); resolve();}, ms);
+        setTimeout(() => {
+            console.log('display-ready');
+            resolve();
+        }, ms);
     });
 }
 
