@@ -63,6 +63,11 @@ class BaseUser implements BaseUserData {
         this.age = age;
     }
 
+    async getStatusLabel(): Promise<string> {
+        const statusLabel = await showUserStatus(this.name);
+        return String(statusLabel);
+    }
+
     isAdult(): boolean {
         return this.age >= 18;
     }
@@ -70,7 +75,6 @@ class BaseUser implements BaseUserData {
     ageInYears(years: number): number {
         return addNumbers(this.age, years);
     }
-
 }
 
 class UserPoland extends BaseUser {
@@ -105,6 +109,9 @@ const bahrainUser = new UserBahrain('Ahmed Al Khalifa', 19, 'YSKDI3803');
 console.log(polishUser.name, polishUser.polishID, polishUser.isAdult());
 console.log(bahrainUser.name, bahrainUser.bahrainID, bahrainUser.isAdult(), bahrainUser.addVisit());
 console.log(polishUser.ageInYears(5));
+polishUser.getStatusLabel().then((statusLabel) => {
+    console.log(statusLabel);
+});
 
 // --- ⭐ Optional Task Execution (Before & After) ---
 

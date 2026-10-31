@@ -40,4 +40,3 @@ export async function showUserStatus(name: string): Promise<string> {
 async function runModule04Example(): Promise <void> {
 console.log(await showUserStatus('Alex'));
 } runModule04Example();
-
