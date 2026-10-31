@@ -4,6 +4,10 @@
 // For test `TC-101` that passed, it must return `TC-101: PASS`.
 // For test `TC-102` that failed, it must return `TC-102: FAIL`.
 
+import { loadFakeStatus } from '@test-data/fakeServer';
+import { formatStatus } from '@helpers/helperExample';  
+import { waitForReady as waitForReadyAlias } from '@helpers/helperExample';
+
 function returnTestResultAsString(testCaseId: string, testResult: string): string {
     return `${testCaseId}: ${testResult}`
 }
@@ -25,4 +29,14 @@ console.log(decisionIfTestMayrun(true, 2)); // true
 console.log(decisionIfTestMayrun(false, 1)); // false
 console.log(decisionIfTestMayrun(true, 3)); // false    
 console.log(decisionIfTestMayrun(false, 4)); // false
- 
+
+export async function showUserStatus(name: string): Promise<string> {
+    const status = await loadFakeStatus(name); // Prints 'status-loaded' internally
+    await waitForReadyAlias(200);             // Waits 200ms, then prints 'display-ready'
+    console.log('show-status');                // Prints 'show-status'
+    return formatStatus(status.name, status.active); // Returns 'Alex: ACTIVE' (printed by caller)
+}
+
+async function runModule04Example(): Promise <void> {
+console.log(await showUserStatus('Alex'));
+} runModule04Example();

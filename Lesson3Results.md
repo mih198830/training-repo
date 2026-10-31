@@ -1,4 +1,37 @@
-## Task 1 — Values`
+## Task 1 — dd the fake service and first alias`
+npx tsc --noEmit
+npm notice run training-repo-3(typescript_practice)@1.0.0 npx
+npm notice run 'tsc' --noEmit
+
+npx tsx src/functions.ts 
+TC-101: PASS
+TC-102: FAIL
+true
+false
+false
+false
+status-loaded
+show-status
+Alex: ACTIVE
+
+## Task 2 — Make your own helper and alias
 
 
- ## Task 2 — Functions`
+## Task 3 - Fix the async function
+status-loaded
+show-status
+Alex: ACTIVE
+
+## Task 4 — Write and await your own Promise
+status-loaded
+display-ready 200
+show-status
+Alex: ACTIVE
+
+## Task 5 — Use the async flow in `BaseUser
+display-ready
+show-status
+Alex: ACTIVE
+display-ready
+show-status
+Janusz Kowalski: ACTIVE
