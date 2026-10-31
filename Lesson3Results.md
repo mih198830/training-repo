@@ -29,3 +29,9 @@ show-status
 Alex: ACTIVE
 
 ## Task 5 — Use the async flow in `BaseUser
+display-ready
+show-status
+Alex: ACTIVE
+display-ready
+show-status
+Janusz Kowalski: ACTIVE
