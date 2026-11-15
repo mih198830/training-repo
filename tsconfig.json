@@ -1,6 +1,10 @@
 {
   "include": [
     "src/**/*.ts",
+    "test-data/**/*.ts",
+    "fixtures/**/*.ts",
+    "playwright.config.ts",
+    "tests/**/*.ts"
     "test-data/**/*.ts"
   ],
   "compilerOptions": {
@@ -13,7 +17,8 @@
     "strict": true,
     "paths": {
       "@test-data/*": ["./test-data/*"],
-      "@helpers/*": ["./src/helpers/*"]
+      "@helpers/*": ["./src/helpers/*"],
+      "@fixtures/*": ["./fixtures/*"]
     }
   }
 }
