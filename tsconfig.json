@@ -5,6 +5,7 @@
     "fixtures/**/*.ts",
     "playwright.config.ts",
     "tests/**/*.ts"
+    "test-data/**/*.ts"
   ],
   "compilerOptions": {
     "target": "ES2022",
