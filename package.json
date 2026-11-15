@@ -4,7 +4,8 @@
   "description": "",
   "main": "hometask.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:pw": "playwright test",
+    "test:pw:ui": "playwright test --ui"
   },
   "keywords": [],
   "type": "commonjs",
@@ -15,5 +16,9 @@
   "allowScripts": {
     "fsevents@2.3.3": true,
     "esbuild@0.28.2": true
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^24.19.2"
   }
 }

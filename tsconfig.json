@@ -1,7 +1,10 @@
 {
   "include": [
     "src/**/*.ts",
-    "test-data/**/*.ts"
+    "test-data/**/*.ts",
+    "fixtures/**/*.ts",
+    "playwright.config.ts",
+    "tests/**/*.ts"
   ],
   "compilerOptions": {
     "target": "ES2022",
@@ -13,7 +16,8 @@
     "strict": true,
     "paths": {
       "@test-data/*": ["./test-data/*"],
-      "@helpers/*": ["./src/helpers/*"]
+      "@helpers/*": ["./src/helpers/*"],
+      "@fixtures/*": ["./fixtures/*"]
     }
   }
 }
